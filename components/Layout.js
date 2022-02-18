@@ -1,4 +1,6 @@
 import Head from "next/head"
+import Header from "./Header"
+import Footer from "./Footer"
 
 const Layout = ({ children, pagina }) => {
   return (
@@ -7,8 +9,12 @@ const Layout = ({ children, pagina }) => {
             <title>GuitarLA - {pagina}</title>
             <meta name="description" content="Sitio web de venta de guitarras" />
         </Head>
-        <h1>Desde Layout</h1>
+        
+        <Header/>
+
         {children}
+
+        <Footer/>
     </div>
   )
 }
