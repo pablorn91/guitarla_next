@@ -27,10 +27,10 @@ const Blog = ({entradas}) => {
 //getServerSideProps getStaticProps
 export async function getStaticProps() {
 
-  const url = 'http://localhost:1337/blogs';
+        const url = `${process.env.API_URL}/blogs`;
         const respuesta = await fetch(url);
         const entradas = await respuesta.json();
-
+        console.log(url)
   return {
     props: {
       entradas
